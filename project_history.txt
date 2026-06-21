@@ -1,0 +1,138 @@
+    1  date
+    2  df .
+    3  id
+    4  umask
+    5  ls -dZ.
+    6  ls dZ .
+    7  ls -dZ .
+    8  touch file1
+    9  ls -i file1
+   10  sudo -i
+   11  exit
+   12  cat /etc/fedora-release
+   13  nmcli connection show
+   14  ip addr show
+   15  id addr show
+   16  ip addr show
+   17  nmcli connection show
+   18  nmcli con shoow
+   19  nmcli con show
+   20  sudo nmcli con mod enp0s3 ipv4.addresses "" ipv4.gateway "" ipv4.dns ""
+   21  sudo nmcli con mod "Проводное подключение 1" ipv4.addresses "" ipv4.gateway "" ipv4.dns ""
+   22  sudo nmcli con mod "Проводное подключение 1" ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8" ipv4.method manuil ipv4.ignore
+   23  sudo nmcli con mod "Проводное подключение 1" > ipv4.addresses 192.168.1.100/24 > ipv4.gateway 192.168.1.1 > ipv4.dns "8.8.8.8" > ipv4.method manual > ipv4.ignore
+   24  ip roure show
+   25  ip route show
+   26  sudo nmcli con down "Проводное подключение 1"
+   27  sudo nmcli con up "Проводное подключение 1"
+   28  ip addr show
+   29  sudo nmcli con mod "Проводное подключение 1" ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8" ipv4.method manual ipv4.ignore
+   30  sudo nmcli con mod "Проводное подключение 1" ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8" ipv4.method manual ipv4.ignore-auto-dns yes
+   31  sudo nmcli con down "Проводное подключение 1"
+   32  sudo nmcli con up "Проводное подключение 1"
+   33  ip addr show
+   34  ip addr show | grep default
+   35  ip addr show
+   36  nmcli dev show
+   37  hostname
+   38  sudo hostnamectl set-hostname mephi-2026.domain.local
+   39  hostnamectl
+   40  ping -c 4 8.8.8.8
+   41  pinc -c 4 192.168.1.1
+   42  ping -c 4 192.168.1.1
+   43  ping -c 4 192.168.1.1 > /home/fedora/Документы/network_check.txt
+   44   ping -c 4 8.8.8.8 >> /home/fedora/Документы/network_check.txt
+   45  cat /home/fedora/Документы/network_check.txt
+   46  sudo dnf install nginx tcpdump libcap-ng-utils -y
+   47  rpm -q nginx tcpdump libcap-ng-utils
+   48  which nginx tcpdump getcap setcap
+   49  sudo dnf install dnf-plugin-downloadonly -y
+   50  sudo dnf download tcpdump --downloaddir=/tmp
+   51  sudo dnf download tcpdump --destdir=/tmp
+   52  ls -la tcpdump*.rpm
+   53  cd /tmp
+   54  ls -la tcpdump*.rpm
+   55  cd
+   56  sudo rpm -Uvh /tmp/tcpdump-4.99.6-2.fc43.x86_64.rpm
+   57  tcpdump --version
+   58  lsblk
+   59  sudo fdisk /dev/sdb
+   60  lsblk
+   61  sudo mkfs.ext4 -L MEPHI_DATA /dev/sdb1
+   62  sudo mkdir -p /data/mephi-web
+   63  sudo blkid /dev/sdb1
+   64  sudo nano /etc/fstab
+   65  sudo mount -a
+   66  df -h | grep mephi-web
+   67  df -h | grep MEPHI_DATA
+   68  cat /etc/fstab
+   69  sudo systemctl start nginx
+   70  sudo systemctl enable nginx
+   71  sudo systemctl status nginx
+   72  sudo journalctl -u nginx --since "5 minutes ago"
+   73  sudo journalctl -u nginx --since "5 minutes ago" > /home/fedora/Документы/nginx_recent_logs.txt
+   74  cat /home/fedora/Документы/nginx_recent_logs.txt
+   75  sudo useradd mephi-admin
+   76  sudo passwd mephi-admin
+   77  sudo groupadd mephi-devs
+   78  sudo usermod -aG mephi-devs mephi-admin
+   79  sudo chown mephi-admin:mephi-devs /data/mephi-web
+   80  sudo chmod 2775 /data/mephi-web
+   81  ld -ld /data/mephi-web
+   82  ls -ld /data/mephi-web
+   83  stat /data/mephi-web > /home/fedora/Документы/permissions.txt
+   84  id mephi-admin > /home/fedora/Документы/users_groups.txt
+   85  getenforce
+   86  sestatus
+   87  sudo semanage fcontext -a -t httpd_sys_content_t "/data/mephi-web(/.*)?"
+   88  sudo restorecon -Rv /data/mephi-web
+   89  ls -Z /data/mephi-web
+   90  sudo chmod u-s /usr/sbin/tcpdump
+   91  sudo setcap cap_net_raw, cap_net_admin+ep /usr/sbin/tcpdump
+   92  sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
+   93  getcap /usr/sbin/tcpdump
+   94  sudo -u mephi-admin tcpdump --help
+   95  getenforce
+   96  getenforce > /home/fedora/Документы/selinux_status.txt
+   97  ls -Zd /data/mephi-web
+   98  ls -Zd /data/mephi-web > /home/fedora/Документы/file_contexts.txt
+   99  getcap /usr/sbin/tcpdump
+  100  getcap /usr/sbin/tcpdump > /home/fedora/Документы/tcpdump_capabilities.txt
+  101  sudo touch /etc/ssh/denied_users
+  102  sudo -l -U fedora
+  103  echo "root" | sudo tee /etc/ssh/denied_users
+  104  sudo nano /etc/pam.d/login
+  105  sudo nano /etc/ssh/sshd_config
+  106  sudo nano /etc/pam.d/login
+  107  sudo nano /etc/ssh/sshd_config
+  108  sudo systemctl restart sshd
+  109  systemctl status sshd.service
+  110  sudo sshd -t
+  111  cat /etc/ssh/sshd_config
+  112  sudo nan0 /etc/ssh/sshd_config
+  113  sudo nano /etc/ssh/sshd_config
+  114  sudo nano /etc/pam.d/sshd
+  115  sudo sshd -t
+  116  sudo systemctl restart sshd
+  117  sudo systemctl status sshd
+  118  hostname -I
+  119  ssh root@192.168.1.100
+  120  ssh fedora@192.168.1.100
+  121  ssh root@192.168.1.100
+  122  su - mephi-admin
+  123  sudo usermod -aG wheel mephi-admin
+  124  groups mephi-admin
+  125  su - mephi-admin
+  126  sudo nano /etc/httpd/conf/httpd.conf
+  127  sudo semanage port -a -t http_port_t -p tcp 8080
+  128  sudo semanage port -m -t http_port_t -p tcp 8080
+  129  sudo firewall-cmd --permanent --add-port=8080/tcp
+  130  sudo firewall-cmd --reload
+  131  sudo systemctl start httpd
+  132  sudo ss -tulnp | grep httpd
+  133  su - mephi-admin
+  134  curl -s http://192.168.1.100
+  135  curl -s http://192.168.1.100 >/home/fedora/Документы/curl_output.txt
+  136  wget -qO- http://192.168.1.100
+  137  history
+  138  history > /home/fedora/Документы/project_history.txt
