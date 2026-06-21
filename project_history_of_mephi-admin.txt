@@ -114,3 +114,5 @@
   114  history > /home/fedora/Документы/project_history_of_mephi-admin.txt
   115  history > /data/mephi-web
   116  history > /data/mephi-web/project_history_of_mephi-admin.txt
+  
+  
