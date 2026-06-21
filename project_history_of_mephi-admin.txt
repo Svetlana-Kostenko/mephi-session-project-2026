@@ -1,0 +1,116 @@
+    1  cd /data/mephi-web
+    2  nano index.html
+    3  cat index.html
+    4  chmod 644 index.html
+    5  ls -l index.html
+    6  curl http://localhost
+    7  curl http://192.168.1.100
+    8  curl -s http://192.168.1.100
+    9  ls -la /data/merphi-web/
+   10  cd
+   11  ls -la /data/merphi-web/
+   12  ls -la /data/mephi-web/
+   13  cat /data/mephi-web/index/html
+   14  cat /data/mephi-web/index.html
+   15  ls -l /data/mephi-web/index.html
+   16  sudo grep -r "DocumentRoot|root" /etc/httpd/ /etc/nginx/
+   17  sudo usermod -aG wheel mephi-admin
+   18  exit
+   19  sudo grep -r "DocumentRoot|root" /etc/httpd/ /etc/nginx/
+   20  sudo systemctl status httpd
+   21  sudo systemctl status nginx
+   22  sudo systemctl start httpd
+   23  systemctl status httpd.service
+   24  exit
+   25  systemctl status httpd.service
+   26  sudo systemctl status nginx
+   27  curl -s http://localhost
+   28  sudo grep -r "DocumentRoot|root" /etc/httpd/
+   29  sudo nano /etc/httpd/conf/httpd.conf
+   30  ls -l /data/mephi-web/index.html
+   31  sudo system restart httpd
+   32  sudo systemctl restart httpd
+   33  curl -s http://localhost
+   34  sudo httpd -t
+   35  sudo tail -20 /var/log/httpd/error_log
+   36  sudo restoreson  -Rv /data/mephi-web 
+   37  sudo restorecon -Rv /data/mephi-web
+   38  sudo systemctl restart httpd
+   39  curl http://localhost
+   40  sudo grep -r "DocumentRoot" /etc/httpd/
+   41  sudo chcon -R -t httpd_sys_content_t /data/mephi-web
+   42  curl http://localhost
+   43  sudo chown apache:apache /data/mephi-web/index.html
+   44  curl http://localhost
+   45  sudo systymctl nginx status
+   46  sudo systemctl nginx status
+   47  sudo systemctl status nginx
+   48  sudo systemctl status httpd
+   49  sudo systemctl restart httpd
+   50  curl http://localhost
+   51  sudo grep -r "DirectoryIndex" /ect/httpd/
+   52  sudo grep -r "DirectoryIndex" /etc/httpd/
+   53  ls -l /data/mephi-web/index.html
+   54  ls -ld /data/mephi-web/
+   55  sudo httpd -t
+   56  sudo tail -30 /var/log/httpd/error_log
+   57  sestatus
+   58  curl -I http://localhost:8080
+   59  getenforce
+   60  ls -Z /data/mephi-web/index.html
+   61  curl -v http://localhost
+   62  curl http://localhost
+   63  sudo restorecon -v /data/mephi-web
+   64  sudo firewall-cmd --list-all
+   65  sudo firewall-cmd --permanent --add-service=http
+   66  sudo firewall-cmd --reload
+   67  sudo firewall-cmd --list-all
+   68  curl http://localhost
+   69  sudo restorecon -Rv /data/mephi-web
+   70  ls -Z /data/mephi-web/index/html
+   71  ls -Z /data/mephi-web/index.html
+   72  ls -Zd /data /data/mephi-web
+   73  sudo chcon -t httpd_sys_content_t /data
+   74  ls -Zd /data
+   75  ls -Zd /data /data/mephi-web
+   76  curl http://localhost
+   77  sudo nano /etc/httpd/conf/httpd.conf
+   78  sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.bak
+   79  sudo systemctl restart httpd
+   80  curl -I http://localhost:8080
+   81  curl http://localhost:8080
+   82  curl http://192.168.1.100
+   83  curl http://192.168.1.100:80
+   84  curl http://192.168.1.100:8080
+   85  sudo setsebool -P httpd_can_network_connect 1
+   86  sudo nano /etc/nginx/conf.d/mephi-web.conf
+   87  sudo nginx -t
+   88  sudo nano /etc/nginx/conf.d/mephi-web.conf
+   89  sudo nginx -t
+   90  sudo systemctl restart nginx
+   91  curl http://192.168.1.100
+   92  curl http://localhost
+   93  curl http://localhost:8080
+   94  sudo nano /etc/nginx/conf.d/mephi-web.conf
+   95  sudo setsebool -P httpd_can_network_connect 1
+   96  sudo systemctl enable --now nginx
+   97  sudo systemctl restart nginx
+   98  curl http://localhost
+   99  curl http://localhost:8080
+  100  curl http://192.168.1.100:8080
+  101  sudo nano /etc/nginx/nginx.conf
+  102  sudo grep -r "Listen 8080" /etc/httpd/
+  103  sudo systemctl status nginx
+  104  curl -v http://localhost
+  105  sudo nano /etc/nginx/nginx.conf
+  106  sudo nginx -t
+  107  sudo systemctl restart nginx
+  108  curl http://localhost
+  109  curl http://192.168.1.100
+  110  curl -s http://192.168.1.100
+  111  curl -s http://192.168.1.100 >/home/fedora/Документы/curl_output.txt
+  112  exit
+  113  history
+  114  history > /home/fedora/Документы/project_history_of_mephi-admin.txt
+  115  history > /data/mephi-web
+  116  history > /data/mephi-web/project_history_of_mephi-admin.txt
